@@ -1,14 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Maryam's Website</title>
-  <style>
-    body { font-family: Arial; text-align: center; padding-top: 50px; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maryam — Machine Learning Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hi, I’m Maryam 👋</h1>
-  <p>Welcome to my personal website hosted on GitHub Pages!</p>
+
+  <!-- Header / Hero -->
+  <header class="hero">
+    <div class="container">
+      <h1>Maryam</h1>
+      <h2>Machine Learning Engineer</h2>
+      <p>Building intelligent systems that turn data into impact.</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="about container">
+    <h2>About Me</h2>
+    <p>
+      I’m a Machine Learning Engineer with experience in deep learning, natural language processing, 
+      and computer vision. I enjoy solving challenging problems and deploying AI models that create real-world value.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills container">
+    <h2>Skills</h2>
+    <div class="skill-list">
+      <div class="skill">Python</div>
+      <div class="skill">TensorFlow</div>
+      <div class="skill">PyTorch</div>
+      <div class="skill">NLP</div>
+      <div class="skill">Computer Vision</div>
+      <div class="skill">MLOps</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects container">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Image Classification with CNNs</h3>
+      <p>Built a convolutional neural network to classify medical images with 92% accuracy.</p>
+    </div>
+    <div class="project-card">
+      <h3>Chatbot for Customer Support</h3>
+      <p>Developed an NLP-based chatbot using Transformers to handle FAQs and live chat requests.</p>
+    </div>
+    <div class="project-card">
+      <h3>Predictive Maintenance System</h3>
+      <p>Implemented a machine learning model to predict equipment failures, reducing downtime by 30%.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact container">
+    <h2>Contact</h2>
+    <p>Email me at <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>Or connect on <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Maryam — Machine Learning Engineer</p>
+  </footer>
+
 </body>
 </html>
