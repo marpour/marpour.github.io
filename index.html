@@ -61,13 +61,14 @@
     }
 
     nav a{
-      text-decoration:underline;
-      color:var(--ink);
-      font-weight:600;
-      margin-right:22px;
+      text-decoration:none;color:var(--ink);font-weight:600;margin-right:22px
     }
     nav a:last-child{margin-right:0}
     nav a:hover{opacity:.7}
+    nav a.active{position:relative}
+    nav a.active::after{
+      content:"";position:absolute;left:0;bottom:-6px;height:2px;width:100%;background:var(--ink);opacity:.8;border-radius:2px
+    }
 
     .social{
       display:flex; align-items:center; gap:14px;
