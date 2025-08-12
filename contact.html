@@ -158,21 +158,18 @@
             <li class="contact-item">
               <span class="contact-label">Email</span>
               <a id="emailLink" href="mailto:vmvahdatpour@gmail.com">vmvahdatpour@gmail.com</a>
-              <button class="btn btn-ghost sm copyBtn" data-copy="vmvahdatpour@gmail.com">Copy</button>
+              <button class="btn btn-ghost sm" id="copyEmailBtn" type="button">Copy</button>
             </li>
             <li class="contact-item">
               <span class="contact-label">GitHub</span>
-              <a href="https://github.com/marvpour" target="_blank" rel="noreferrer">marvpour</a>
-              <button class="btn btn-ghost sm copyBtn" data-copy="https://github.com/marvpour">Copy</button>
+              <a id="githubLink" href="https://github.com/marvpour" target="_blank" rel="noreferrer">marvpour</a>
+              <button class="btn btn-ghost sm" id="copyGithubBtn" type="button">Copy</button>
             </li>
             <li class="contact-item">
               <span class="contact-label">LinkedIn</span>
-              <a href="https://linkedin.com/in/maryam-vahdat-pour" target="_blank" rel="noreferrer">maryam-vahdat-pour</a>
-              <button class="btn btn-ghost sm copyBtn" data-copy="https://linkedin.com/in/maryam-vahdat-pour">Copy</button>
+              <a id="linkedinLink" href="https://linkedin.com/in/maryam-vahdat-pour" target="_blank" rel="noreferrer">maryam-vahdat-pour</a>
+              <button class="btn btn-ghost sm" id="copyLinkedinBtn" type="button">Copy</button>
             </li>
-
-
-
           </ul>
 
           <div class="cta-panel">
@@ -229,16 +226,43 @@
   </div>
 
   <script>
-    document.querySelectorAll('.copyBtn').forEach(button => {
-    button.addEventListener('click', () => {
-    const text = button.dataset.copy;
-    navigator.clipboard.writeText(text).then(() => {
-      const old = button.textContent;
-      button.textContent = 'Copied!';
-      setTimeout(() => { button.textContent = old; }, 1500);
+    // Copy email helper
+    document.getElementById('copyEmailBtn')?.addEventListener('click', () => {
+      const email = document.getElementById('emailLink')?.textContent?.trim();
+      if (!email) return;
+      navigator.clipboard.writeText(email).then(() => {
+        const btn = document.getElementById('copyEmailBtn');
+        const old = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(()=>{ btn.textContent = old; }, 1500);
+      });
     });
-   });
-  });
+  </script>
+  <script>
+    // Copy email helper
+    document.getElementById('copyGithubBtn')?.addEventListener('click', () => {
+      const email = document.getElementById('githubLink')?.textContent?.trim();
+      if (!email) return;
+      navigator.clipboard.writeText(email).then(() => {
+        const btn = document.getElementById('copyGithubBtn');
+        const old = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(()=>{ btn.textContent = old; }, 1500);
+      });
+    });
+  </script>
+  <script>
+    // Copy email helper
+    document.getElementById('copyLinkedinBtn')?.addEventListener('click', () => {
+      const email = document.getElementById('linkedinLink')?.textContent?.trim();
+      if (!email) return;
+      navigator.clipboard.writeText(email).then(() => {
+        const btn = document.getElementById('copyLinkedinBtn');
+        const old = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(()=>{ btn.textContent = old; }, 1500);
+      });
+    });
   </script>
 </body>
 </html>
