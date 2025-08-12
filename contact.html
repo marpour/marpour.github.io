@@ -239,11 +239,11 @@
     });
   </script>
   <script>
-    // Copy email helper
+    // Copy github helper
     document.getElementById('copyGithubBtn')?.addEventListener('click', () => {
-      const email = document.getElementById('githubLink')?.textContent?.trim();
-      if (!email) return;
-      navigator.clipboard.writeText(email).then(() => {
+      const github = document.getElementById('githubLink')?.href;
+      if (!github) return;
+      navigator.clipboard.writeText(github).then(() => {
         const btn = document.getElementById('copyGithubBtn');
         const old = btn.textContent;
         btn.textContent = 'Copied!';
@@ -252,11 +252,11 @@
     });
   </script>
   <script>
-    // Copy email helper
+    // Copy linkedin helper
     document.getElementById('copyLinkedinBtn')?.addEventListener('click', () => {
-      const email = document.getElementById('linkedinLink')?.textContent?.trim();
-      if (!email) return;
-      navigator.clipboard.writeText(email).then(() => {
+      const linkedin = document.getElementById('linkedinLink')?.href;
+      if (!linkedin) return;
+      navigator.clipboard.writeText(linkedin).then(() => {
         const btn = document.getElementById('copyLinkedinBtn');
         const old = btn.textContent;
         btn.textContent = 'Copied!';
