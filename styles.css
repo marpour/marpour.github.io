@@ -110,3 +110,10 @@ nav a.active::after{
   .projects-grid{grid-template-columns:1fr}
   .portrait{width:160px;height:160px}
 }
+
+.project-media {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
