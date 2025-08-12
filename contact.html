@@ -11,35 +11,152 @@
   <div class="container">
     <header class="site-header">
       <div class="brand">
-        <a class="logo-initials" href="index.html"> MVP </a>
-        <nav>
+        <a class="logo-initials" href="index.html" aria-label="Home">CB</a>
+        <nav aria-label="Primary">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="projects.html">Projects</a>
-          <a href="assets/MaryamResume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <a href="articles.html">Articles</a>
           <a class="active" href="contact.html">Contact</a>
         </nav>
+      </div>
+      <div class="social">
+        <a href="https://github.com/YOURUSERNAME" target="_blank" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.23 3.39 9.66 8.1 11.23.6.12.82-.27.82-.6l-.02-2.16c-3.3.73-4-1.62-4-1.62-.55-1.4-1.35-1.77-1.35-1.77-1.1-.78.08-.76.08-.76 1.2.09 1.84 1.25 1.84 1.25 1.08 1.9 2.83 1.35 3.52 1.03.11-.8.42-1.35.77-1.66-2.63-.31-5.4-1.35-5.4-6.04 0-1.34.47-2.43 1.24-3.29-.13-.31-.54-1.58.12-3.3 0 0 .99-.32 3.25 1.25a11.2 11.2 0 0 1 5.92 0c2.26-1.57 3.25-1.25 3.25-1.25.66 1.72.25 2.99.12 3.3.77.86 1.24 1.95 1.24 3.29 0 4.7-2.78 5.72-5.42 6.03.43.37.82 1.11.82 2.24l-.02 3.32c0 .33.22.73.83.6A11.5 11.5 0 0 0 23.5 12.3 11.5 11.5 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a href="https://twitter.com/YOURUSERNAME" target="_blank" aria-label="Twitter" title="Twitter / X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2H21l-6.53 7.46L22.5 22h-6.9l-4.51-5.95L5.9 22H3.14l7.09-8.1L1.5 2h6.93l4.08 5.45L18.24 2Zm-1.2 18.4h1.85L7.05 3.6H5.1L17.04 20.4Z"/></svg>
+        </a>
       </div>
     </header>
 
     <main class="page">
-      <section class="page-hero">
+      <section class="page-hero contact-hero">
         <div class="page-hero-content">
-          <h1>Contact Me</h1>
-          <p class="lead">Want to work together or have questions? Reach out below.</p>
-          <ul class="pill-list">
-            <li>Email: <a href="vmvahdatpour@gmail.com">vmvahdatpour@gmail.com</a></li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/maryam-vahdat-pour" target="_blank">linkedin.com/in/maryam-vahdat-pour</a></li>
-<!--            <li>Twitter: <a href="https://twitter.com/YOURUSERNAME" target="_blank">@YOURUSERNAME</a></li>-->
-            <li>GitHub: <a href="https://github.com/marvpour" target="_blank">github.com/marvpour</a></li>
+          <h1>Let's build something great</h1>
+          <p class="lead">
+            Have a question, project idea, or collaboration in mind? Reach out via email or the form —
+            I usually reply within 1–2 business days.
+          </p>
+
+          <!-- Quick chips -->
+          <div class="contact-chips">
+            <span class="chip">Freelance & Consulting</span>
+            <span class="chip">ML Engineering</span>
+            <span class="chip">Prototype to Production</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Two-column contact layout -->
+      <section class="contact-grid">
+        <!-- Left: contact cards -->
+        <div class="card contact-card">
+          <h2>Contact Info</h2>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Email</span>
+              <a id="emailLink" href="mailto:youremail@example.com">youremail@example.com</a>
+              <button class="btn btn-ghost sm" id="copyEmailBtn" type="button">Copy</button>
+            </li>
+            <li>
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/YOURUSERNAME" target="_blank">github.com/YOURUSERNAME</a>
+            </li>
+            <li>
+              <span class="contact-label">Twitter</span>
+              <a href="https://twitter.com/YOURUSERNAME" target="_blank">@YOURUSERNAME</a>
+            </li>
+            <li>
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/YOURUSERNAME" target="_blank">linkedin.com/in/YOURUSERNAME</a>
+            </li>
           </ul>
+
+          <div class="cta-panel">
+            <h3>Prefer email?</h3>
+            <p>Shoot a detailed brief and I'll follow up with timelines and scope.</p>
+            <a class="btn" href="mailto:youremail@example.com?subject=Project%20Inquiry%20from%20Website">Email Me</a>
+          </div>
+        </div>
+
+        <!-- Right: contact form -->
+        <div class="card form-card">
+          <h2>Send a Message</h2>
+
+          <!-- Mailto (default): opens email client on submit -->
+          <form class="contact-form" action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <div class="form-row">
+              <label for="name">Your Name</label>
+              <input class="input" id="name" name="name" type="text" placeholder="Jane Doe" required>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input class="input" id="email" name="email" type="email" placeholder="jane@example.com" required>
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input class="input" id="subject" name="subject" type="text" placeholder="Project idea / question" required>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea class="textarea" id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn" type="submit">Send</button>
+              <button class="btn btn-ghost" type="reset">Reset</button>
+            </div>
+          </form>
+
+          <!-- Formspree (optional backend): replace the <form> above with this one
+          <form class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <div class="form-row">
+              <label for="fs-name">Your Name</label>
+              <input class="input" id="fs-name" name="name" type="text" required>
+            </div>
+            <div class="form-row">
+              <label for="fs-email">Email</label>
+              <input class="input" id="fs-email" name="_replyto" type="email" required>
+            </div>
+            <div class="form-row">
+              <label for="fs-subject">Subject</label>
+              <input class="input" id="fs-subject" name="subject" type="text" required>
+            </div>
+            <div class="form-row">
+              <label for="fs-message">Message</label>
+              <textarea class="textarea" id="fs-message" name="message" rows="5" required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="New message from website">
+            <div class="form-actions">
+              <button class="btn" type="submit">Send</button>
+            </div>
+          </form>
+          -->
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <small>© 2025 Maryam. All rights reserved.</small>
+      <small>© 2025 Your Name. All rights reserved.</small>
     </footer>
   </div>
+
+  <script>
+    // Copy-to-clipboard for email
+    document.getElementById('copyEmailBtn')?.addEventListener('click', () => {
+      const email = document.getElementById('emailLink')?.textContent?.trim();
+      if (!email) return;
+      navigator.clipboard.writeText(email).then(() => {
+        const btn = document.getElementById('copyEmailBtn');
+        const old = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(()=>{ btn.textContent = old; }, 1500);
+      });
+    });
+  </script>
 </body>
 </html>
